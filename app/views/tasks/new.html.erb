@@ -1,0 +1,7 @@
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :details %>
+  <%= f.label "Completed?" %>
+  <%= f.text_field :completed %>
+  <%= f.submit %>
+<% end %>
