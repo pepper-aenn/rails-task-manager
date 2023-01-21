@@ -11,15 +11,15 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
-#   def create
-#     @task = Task.new(params[:task])
-#     @task.save # Will raise ActiveModel::ForbiddenAttributesError
-#     redirect_to tasks_path(@task)
-#   end
+  def create
+    @task = Task.new(tasks_params)
+    @task.save
+    redirect_to tasks_path(@task)
+  end
 
-# private
+private
 
-#   def restaurant_params
-#     params.require(:task).permit(:title, :details, :completed)
-#   end
+  def tasks_params
+    params.require(:task).permit(:title, :details, :completed)
+  end
 end
