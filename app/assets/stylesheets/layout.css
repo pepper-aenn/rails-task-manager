@@ -1,12 +1,10 @@
-
-
-
-.container-md {
+.container-sm {
   margin: 150px 100px 200px 200px;
-  /* background-color: white; */
   font-family: monospace;
   font-size: 16px;
-
+  border-style: solid;
+  border-color: #FF7E76;
+  color:black;
 }
 
 .link-icon {
@@ -14,6 +12,40 @@
   margin-left: 14px;
 }
 
+.coloured {
+  background-color: #FF7E76;
+  border-color: white;
+  border-style: solid;
+  width: 130px;
+  color: white;
+}
+
 ul {
   list-style: none;
+}
+
+#tasks {
+  margin-top: 16px;
+  margin-left: 8px;
+}
+
+.row {
+  width: 300px;
+}
+
+.first-row {
+  width: 150px;
+}
+
+.coloured h1 {
+  margin: 8px;
+}
+
+#new {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+a {
+  color:black;
 }
