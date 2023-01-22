@@ -32,9 +32,9 @@ class TasksController < ApplicationController
     redirect_to tasks_path, status: :see_other
   end
 
-   def new_record?
-      @new_record
-    end
+  def new_record?
+    @new_record
+  end
 
   private
 

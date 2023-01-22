@@ -1,7 +1,37 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<p><%= @task.completed %></p>
-
-<%= link_to "Edit", "#{params[:id]}/edit" %>
-
-<%= link_to "Back to list", tasks_path(@task) %>
+<div class="container-md">
+  <div class="row justify-content-md-center align-items-center">
+    <div class="col col-lg-2">
+      <div class="d-flex justify-content-center">
+        <div class="link-icon">
+          <%= link_to tasks_path(@task) do %>
+            <i class="fa-regular fa-chevron-left"></i>
+          <% end %>
+        </div>
+       <p>back to list</p>
+      </div>
+    </div>
+    <%# <div class="row"> %>
+      <div class="col-lg-2">
+        <h5><%= @task.title %></h5>
+        <p><%= @task.details %></p>
+        <% if @task.completed? %>
+          <p>Completed</p>
+          <i class="fa-regular fa-square-check"></i>
+        <% else %>
+          <p>Not completed</p>
+          <i class="fa-regular fa-square"></i>
+        <% end %>
+        </div>
+      <div class="col-lg-2">
+        <div class="d-flex justify-content-center">
+          <p>edit</p>
+          <div class="link-icon">
+            <%= link_to "#{params[:id]}/edit" do %>
+              <i class="fa-regular fa-pen-to-square"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <%# </div> %>
+  </div>
+</div>
